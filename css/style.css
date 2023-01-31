@@ -1,0 +1,203 @@
+
+body {
+    background-image:linear-gradient(to left, rgb(160, 227, 160), rgb(17, 144, 195),#adc3ef,  rgb(17, 144, 195), rgb(160, 227, 160));
+    display:inline;
+}
+h1{
+    text-align: center;
+    color: rgb(236, 176, 102);
+    font-size: 60px;;
+    letter-spacing:20px;
+    background-color: azure;
+}
+
+
+#obstacle1 {
+    display:none;
+    width:70px;
+    height: 70px;
+    position:absolute;
+    bottom:100px;
+    right:2300px;
+    animation-name: move;
+    animation-duration: 18s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+}
+#obstacle2 {
+    display:none;
+    width:70px;
+    height: 70px;
+    position:absolute;
+    bottom:100px;
+    right:2300px;
+
+    animation-name: move;
+    animation-duration: 10s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+}
+#obstacle3 {
+    display:none;
+    width:70px;
+    height: 70px; 
+    position:absolute;
+    bottom:100px;
+    right:2300px;
+
+    animation-name: move;
+    animation-duration: 25s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+}
+
+#happy {
+    display:none;
+    height:80px;
+    width: 80px;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+
+    animation:jump 1s both 1 linear,
+              emoji 1s both infinite linear;
+
+}
+#cloud1 {
+    display:none;
+    height:100px; 
+    width:190px;
+    position:absolute;
+    top:0px;
+    right:2300px;
+    opacity:0.8;
+
+    animation-name: move;
+    animation-duration: 30s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+}
+
+#cloud2 {
+    display:none;
+    height:150px;
+    width:230px;
+    position:absolute;
+    top:100px;
+    right:2300px;
+    opacity:0.6;
+
+    animation-name: move;
+    animation-duration: 25s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+    animation-delay: 7s;
+}
+#cloud3 {
+    display:none;
+    height:90px;
+    width:170px;
+    position:absolute;
+    top:200px;
+    right:2300px;
+    opacity:0.6;
+
+    animation-name: move;
+    animation-duration: 35s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+    animation-delay: 10s;
+
+}
+#cloud4 {
+    display:none;
+    height:90px;
+    width:170px;
+    position:absolute;
+    top:200px;
+    right:2300px;
+    opacity:0.5;
+
+    animation-name: move;
+    animation-duration: 35s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+
+}
+#sun {
+    display:none;
+    height:200px;
+    width:300px;
+    position:absolute;
+    top:60px;
+    right:2300px;
+    opacity: 0.7;
+
+    animation-name: move;
+    animation-duration: 500s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+
+}
+#grass {
+    display:none;
+    position:absolute;
+    bottom:0px;
+    margin:-10px;
+    height: 110px;
+    width:2000px;
+    border:1px solid rgb(149, 238, 149);
+    background: linear-gradient(to bottom, rgb(135, 244, 153), rgb(32, 206, 32), rgb(1, 80, 1));
+}
+
+#startBox {
+    width: 400px;
+    height:400px;
+    background-image: url(/pictures/silly.png);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top:20%;
+    left:35%;
+    cursor: pointer;
+    animation:jumpStart 0.6s both infinite linear;
+
+}
+button {
+    position:fixed;
+    width: 300px;
+    height: 300px;
+    top:50%;
+    left:40%;
+    opacity:0;
+}
+
+
+@keyframes move{
+    from{ transform: translateX(2500px)}
+    to{ transform: translateX(-100px)}
+}
+
+@keyframes  jump{
+    0% {bottom:100px;}
+    50% {bottom:230px;}
+    100% {bottom:100px;}
+}
+@keyframes emoji{
+    0% {transform:translateY(-2px);}
+    50% {transform:translateY(2px);}
+}
+@keyframes jumpStart{
+    0% {transform:translateY(-2px);}
+    50% {transform:translateY(200px);}
+    100% {transform: translateY(0px);}
+}
