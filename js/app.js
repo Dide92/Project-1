@@ -16,9 +16,6 @@ let startBox =document.getElementById('startBox')
 let h1=document.querySelector('h1')
 let p=document.querySelector('p')
 
-// background-image: ;
-// background-repeat: no-repeat;
-// background-color: rgb(182, 226, 244);
 
 //--------------------------------------------------------------
 
@@ -40,27 +37,43 @@ function startGame() {
     document.body.style.backgroundColor='rgb(17, 144, 195)';
     play.remove()
     Emoji.scoreResult()
-
+    jump()
 }
 
 play.addEventListener('click', startGame)
 
 //--------------------------------------------------------------
 class Game {
-    constructor(timer, score, jump) {
-        this.timer=0
+    constructor(keys, score, ) {
+        this.keys=[' ','arrowUp']
         this.score=0
-        this.jump=0
     }
     scoreResult() {
         setInterval(() => {
             this.score++
 document.querySelector('.score').innerHTML = this.score
         },900)
+    
     }
 }
 
 const Emoji = new Game ('Jumping Emoji')
+
+window.addEventListener('click', jump)
+
+function jump() {
+        if (happy.classList=='jump') {
+            return 
+        }
+        happy.classList.add('jump');
+        setTimeout(removeJump,300)
+}
+function removeJump() {
+    happy.classList.remove('jump') 
+}
+
+
+
 
 
 
@@ -75,5 +88,6 @@ function gameOver() {
     cloud2.remove()
     cloud3.remove()
     cloud4.remove()
+    document.body.style.opacity=0.5;
 }
 

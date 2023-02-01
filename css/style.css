@@ -62,9 +62,11 @@ h1{
     bottom: 100px;
     left: 100px;
 
-    animation:jump 1s both 1 linear,
-              emoji 1s both infinite linear;
+    /* animation:emoji 1s both infinite linear; */
 
+}
+.jump {
+    animation:jump 0.3s linear;
 }
 #cloud1 {
     display:none;
@@ -186,7 +188,7 @@ p {
     text-align: center;
     color: rgb(236, 176, 102);
     font-size: 40px;;
-    /* letter-spacing:10px; */
+    letter-spacing:10px;
     background-color: azure;
     opacity: 0.9;
 }
