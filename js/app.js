@@ -7,7 +7,16 @@ function hello() {
         document.querySelector('.player').innerText = playerName +"'s "
     }
 }
-hello()
+//--------------------------------------------------------------
+
+
+
+
+
+
+
+//--------------------------------------------------------------
+
 
 let grass =document.getElementById('grass')
 let sun =document.getElementById('sun')
@@ -33,6 +42,7 @@ let obstacle1Bottom =parseInt(window.getComputedStyle(obstacle1).getPropertyValu
 let obstacle1Left =parseInt(window.getComputedStyle(obstacle1).getPropertyValue("left"));
 let obstacle1Width =parseInt(window.getComputedStyle(obstacle1).getPropertyValue("width"));
 let obstacle1Height =parseInt(window.getComputedStyle(obstacle1).getPropertyValue("height"));
+let time = document. getElementById('timer');
 
 
 //--------------------------------------------------------------
@@ -51,26 +61,46 @@ function startGame() {
     p.style.display='inline';
     startBox.style.display='none';
     h1.style.display='none';
+    p.style.display='inline';
     document.body.style.backgroundImage='none';
     document.body.style.backgroundColor='rgb(17, 144, 195)';
     play.remove()
     Emoji.scoreResult()
-    // jump()
+    hello()
+    Emoji.timing()
+
 }
 
 play.addEventListener('click', startGame)
 
+
+// let timer;
+// let time = document. getElementById('timer');
+// (function timeBar() {
+    // let sec=0;
+//     timer = setInterval(()=> {
+//         time.innerHTML = '00:'+sec;
+//         sec++;
+//     },1000)
+// })()
 //--------------------------------------------------------------
 class Game {
-    constructor(keys, score, ) {
-        this.keys=[' ','arrowUp']
+    constructor(timer, score, ) {
+        this.timer=timer
         this.score=0
+    }
+    timing() {
+    let sec=0;
+    timer = setInterval(()=> {
+        time.innerHTML = '00:'+sec;
+        sec++;
+    },1000)
     }
     scoreResult() {
         setInterval(() => {
             this.score++
 document.querySelector('.score').innerHTML = this.score
-        },900)
+        },300)
     
     }
 }
@@ -152,6 +182,7 @@ function gameOver() {
     score.style.bottom='100px';
     document.querySelector('.player').innerText = playerName +"'s "
     Emoji.scoreResult()
+    Emoji.timing()
     location.reload()
     
     // document.body.style.opacity=0.5;
