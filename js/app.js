@@ -70,10 +70,20 @@ function jump() {
 }
 function removeJump() {
     happy.classList.remove('jump') 
+
 }
 
 
 
+let alive = setInterval(function () {
+    let happyTop = parseInt(window.getComputedStyle(happy).getPropertyValue('top'));
+    let fire1Left = parseInt(window.getComputedStyle(fire1).getPropertyValue('left'));
+    let fire2Left = parseInt(window.getComputedStyle(fire2).getPropertyValue('left'));
+    let plantLeft = parseInt(window.getComputedStyle(plant).getPropertyValue('left'));
+    if (fire1Left < 50 && fire1Left > 0 && happyTop >= 140) {
+        return gameOver()
+    }
+},10)
 
 
 

@@ -6,7 +6,14 @@ body {
 h1{
     text-align: center;
     color: rgb(236, 176, 102);
+    font-family: sans-serif;
     font-size: 60px;;
+    text-shadow: 0 5px rgb(164, 156, 2);
+    border:12px solid white;
+    width:800px;
+    /* position: relative; */
+    margin:auto;
+    border-top: none;
     letter-spacing:20px;
     background-color: azure;
 }
@@ -61,13 +68,19 @@ h1{
     position: absolute;
     bottom: 100px;
     left: 100px;
+}
 
-    /* animation:emoji 1s both infinite linear; */
-
+.moving {
+    animation:emoji 0.5s both infinite linear;
 }
 .jump {
-    animation:jump 0.3s linear;
+    transform-origin: 50% 50%;
+    animation:jump 1s both ease-in-out;
+        
 }
+/* .jumpingRight {
+    animation: jumpingRight 1s linear;
+} */
 #cloud1 {
     display:none;
     height:100px; 
@@ -198,14 +211,29 @@ p {
 }
 
 @keyframes  jump{
-    0% {bottom:100px;}
-    50% {bottom:230px;}
-    100% {bottom:100px;}
-}
+ 0% {
+    bottom:100px;
+
+ }
+ 30%{
+    bottom:60%;
+    transform: translateX(150px);
+ }
+ 60% {
+    bottom:60%;
+    transform: translateX(150px);
+ }
+ 100% {
+    bottom: 100px;
+ }
+    }
+    
+
 @keyframes emoji{
     0% {transform:translateY(-2px);}
     50% {transform:translateY(2px);}
 }
+
 @keyframes jumpStart{
     0% {transform:translateY(-2px);}
     50% {transform:translateY(200px);}
