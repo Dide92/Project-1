@@ -8,14 +8,14 @@ h1{
     color: rgb(236, 176, 102);
     font-family: sans-serif;
     font-size: 60px;;
-    text-shadow: 0 5px rgb(164, 156, 2);
+    text-shadow: 0 5px rgb(230, 104, 14);
     border:12px solid white;
     width:800px;
     /* position: relative; */
     margin:auto;
     border-top: none;
     letter-spacing:20px;
-    background-color: azure;
+    background-color: white;
 }
 h2 {
     display:none;
@@ -28,7 +28,16 @@ h2 {
     letter-spacing:20px;
     background-color: azure;
 }
+#char {
+    display:none;
+    position:absolute;
+    width:100px;
+    height: 100px;
+    left:100px;
+    bottom:100px;
 
+    animation: emoji 2s linear infinite;
+}
 #obstacle1 {
     display:none;
     width:70px;
@@ -37,7 +46,7 @@ h2 {
     bottom:100px;
     left:100px;
     animation-name: move;
-    animation-duration: 18s; 
+    animation-duration: 10s; 
     animation-iteration-count: infinite;
     animation-timing-function:linear; 
 }
@@ -63,18 +72,37 @@ h2 {
     right:2300px;
 
     animation-name: move;
-    animation-duration: 25s; 
+    animation-duration: 10s; 
+    animation-delay: 15s;
     animation-iteration-count: infinite;
     animation-timing-function:linear; 
 }
 
 #happy {
-    display:none;
-    height:80px;
-    width: 80px;
-    position: absolute;
-    bottom: 100px;
-    left: 100px;
+    /* display:none; */
+    width: 370px;
+    height:370px;
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top:20%;
+    right:2%;
+    cursor: pointer;
+    animation:jumpStart 0.5s both infinite alternate-reverse;
+}
+#cool {
+    /* display:none; */
+    width: 370px;
+    height:370px;
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top:20%;
+    left:2%;
+    cursor: pointer;
+    animation:jumpStart 0.5s both infinite alternate-reverse;
 }
 
 .moving {
@@ -177,26 +205,42 @@ h2 {
     background: linear-gradient(to bottom, rgb(135, 244, 153), rgb(32, 206, 32), rgb(1, 80, 1));
 }
 
-#startBox {
-    width: 400px;
-    height:400px;
-    background-image: url(../pictures/silly.png);
+#silly {
+    /* display:none; */
+    width: 500px;
+    height:500px;
     background-size: 500px;
     background-repeat: no-repeat;
     background-position: center;
     position: fixed;
-    top:20%;
+    top:14%;
     left:35%;
     cursor: pointer;
-    animation:jumpStart 0.6s both infinite linear;
+    animation:jumpStart 0.4s both infinite alternate-reverse;
 
 }
-button {
+#startButton1 {
     position:fixed;
     width: 300px;
-    height: 300px;
-    top:50%;
+    height: 500px;
+    top:30%;
     left:40%;
+    opacity:0;
+}
+#startButton2 {
+    position:fixed;
+    width: 300px;
+    height: 500px;
+    top:30%;
+    left:80%;
+    opacity:0;
+}
+#startButton3 {
+    position:fixed;
+    width: 300px;
+    height: 500px;
+    top:30%;
+    left:5%;
     opacity:0;
 }
 
