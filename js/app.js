@@ -1,7 +1,7 @@
 console.log('Project 1')
 
 
-alert("Welcome to Jumping Emoji! "+ "\n\nThis is an obstacle game. Please use either the space bar or arrow up button to jump over emoji obstacles. You can start the button by clicking any emoji."+"\n\nGood luck and have fun!")
+alert("Welcome to Jumping Emoji! "+ "\n\nThis is an obstacle game. Please use either the space bar or arrow up button to jump over emoji obstacles. Please click to your favorite emoji to begin."+"\n\nGood luck and have fun!")
 
 
 const char = document.getElementById('char')
@@ -73,13 +73,13 @@ play3.addEventListener('click', startGame)
 
 //--------------------------------------------------------------
 
-//This function works, but does not see the image :(
 
 const changeEmojiToCool = () => {
     char.style.backgroundImage="url(pictures/cool.png)";
 }
 const changeEmojiToSilly = () => {
     char.style.backgroundImage="url(pictures/silly.png)";
+    char.style.bottom='80px';
     // char.style.height='100px';
     // char.style.width='100px';
     char.style.backgroundRepeat='no-repeat';
