@@ -1,85 +1,24 @@
-
 body {
-    background-image:linear-gradient(to left, rgb(160, 227, 160), rgb(17, 144, 195),#adc3ef,  rgb(17, 144, 195), rgb(160, 227, 160));
-    display:inline;
+    background-color: rgb(88, 130, 161);
+    margin: auto;
+    /* max-width: 500px; */
 }
 h1{
-    text-align: center;
+    display: inline;
     color: rgb(236, 176, 102);
     font-family: sans-serif;
     font-size: 60px;;
     text-shadow: 0 5px rgb(230, 104, 14);
     border:12px solid white;
     width:800px;
-    /* position: relative; */
-    margin:auto;
     border-top: none;
     letter-spacing:20px;
     background-color: white;
-}
-h2 {
-    display:none;
-    text-align: center;
-    color: rgb(236, 176, 102);
-    font-family: sans-serif;
-    font-size: 60px;;
-    text-shadow: 0 5px rgb(164, 156, 2);
-    margin:auto;
-    letter-spacing:20px;
-    background-color: azure;
-}
-#char {
-    display:none;
-    position:absolute;
-    width:100px;
-    height: 100px;
-    left:100px;
-    bottom:100px;
-
-    animation: emoji 2s linear infinite;
-}
-#obstacle1 {
-    display:none;
-    width:70px;
-    height: 100px;
-    position:absolute;
-    bottom:100px;
-    left:100px;
-    animation-name: move;
-    animation-duration: 10s; 
-    animation-iteration-count: infinite;
-    animation-timing-function:linear; 
-}
-#obstacle2 {
-    display:none;
-    width:70px;
-    height: 70px;
-    position:absolute;
-    bottom:100px;
-    right:2300px;
-
-    animation-name: move;
-    animation-duration: 10s; 
-    animation-iteration-count: infinite;
-    animation-timing-function:linear; 
-}
-#obstacle3 {
-    display:none;
-    width:70px;
-    height: 70px; 
-    position:absolute;
-    bottom:100px;
-    right:2300px;
-
-    animation-name: move;
-    animation-duration: 10s; 
-    animation-delay: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function:linear; 
+    margin: 0 30%;
 }
 
 #happy {
-    /* display:none; */
+    display:inline;
     width: 370px;
     height:370px;
     background-size: 500px;
@@ -92,7 +31,7 @@ h2 {
     animation:jumpStart 0.5s both infinite alternate-reverse;
 }
 #cool {
-    /* display:none; */
+    display:inline;
     width: 370px;
     height:370px;
     background-size: 500px;
@@ -104,109 +43,8 @@ h2 {
     cursor: pointer;
     animation:jumpStart 0.5s both infinite alternate-reverse;
 }
-
-.moving {
-    animation:emoji 0.5s infinite linear;
-}
-.jump {
-    animation:jump 0.5s linear;
-    /* animation-duration: 1s; */
-}
-
-#cloud1 {
-    display:none;
-    height:100px; 
-    width:190px;
-    position:absolute;
-    top:0px;
-    right:2300px;
-    opacity:0.8;
-
-    animation-name: move;
-    animation-duration: 30s; 
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-timing-function:linear; 
-}
-
-#cloud2 {
-    display:none;
-    height:150px;
-    width:230px;
-    position:absolute;
-    top:100px;
-    right:2300px;
-    opacity:0.6;
-
-    animation-name: move;
-    animation-duration: 25s; 
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-timing-function:linear; 
-    animation-delay: 7s;
-}
-#cloud3 {
-    display:none;
-    height:90px;
-    width:170px;
-    position:absolute;
-    top:200px;
-    right:2300px;
-    opacity:0.6;
-
-    animation-name: move;
-    animation-duration: 35s; 
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-timing-function:linear; 
-    animation-delay: 10s;
-
-}
-#cloud4 {
-    display:none;
-    height:90px;
-    width:170px;
-    position:absolute;
-    top:200px;
-    right:2300px;
-    opacity:0.5;
-
-    animation-name: move;
-    animation-duration: 35s; 
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-timing-function:linear; 
-
-}
-#sun {
-    display:none;
-    height:200px;
-    width:300px;
-    position:absolute;
-    top:60px;
-    right:2300px;
-    opacity: 0.7;
-
-    animation-name: move;
-    animation-duration: 500s; 
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-timing-function:linear; 
-
-}
-#grass {
-    display:none;
-    position:absolute;
-    bottom:0px;
-    margin:-10px;
-    height: 110px;
-    width:2000px;
-    border:1px solid rgb(149, 238, 149);
-    background: linear-gradient(to bottom, rgb(135, 244, 153), rgb(32, 206, 32), rgb(1, 80, 1));
-}
-
 #silly {
-    /* display:none; */
+    display:inline;
     width: 500px;
     height:500px;
     background-size: 500px;
@@ -243,31 +81,16 @@ h2 {
     left:5%;
     opacity:0;
 }
-
 p {
     display:none;
     text-align: center;
     color: rgb(236, 176, 102);
     font-size: 40px;;
     letter-spacing:10px;
-    /* background-color: azure; */
     opacity: 0.9;
 }
-#end {
-    display:none;
-    width: 400px;
-    height:400px;
-    background-size: 500px;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: fixed;
-    top:20%;
-    left:35%;
-    animation:jumpStart 0.6s both infinite linear;
-
-}
 #timer {
-    /* display: none; */
+    display: none;
     text-align: center;
     color: rgb(236, 176, 102);
     font-size: 40px;;
@@ -277,34 +100,174 @@ p {
     right:10px;
 }
 
+#grass {
+    display:none;
+    position:absolute;
+    bottom:0px;
+    margin:auto;
+    height: 85px;
+    width:2000px;
+    border:1px solid rgb(149, 238, 149);
+    background: linear-gradient(to bottom, rgb(135, 244, 153), rgb(32, 206, 32), rgb(1, 80, 1));
+}
+
+#char {
+    display:none; 
+    background-image: url(../pictures/happy.png);
+    position:absolute;
+    background-size: 80px 80px;
+    width:80px;
+    height: 80px;
+    bottom:85px;
+
+}
+
+#obstacle1 {
+    display:none;
+    background-image: url(../pictures/plant.png);
+    width: 50px;
+    height: 50px;
+    position:absolute;
+    bottom:85px;
+    background-size: 50px 50px;
+    animation-name: move;
+    animation-duration: 3s; 
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+}
+
+#obstacle2 {
+    display:none;
+    background-image: url(../pictures/fire.png);
+    width:50px;
+    height: 50px;
+    position:absolute;
+    bottom:85px;
+    background-size: 50px 50px;
+    animation-name: move;
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+}
+
+#cloud1 {
+    display:none;
+    background-image: url(../pictures/cloud.png);
+    background-repeat: no-repeat;
+    height:180px;
+    width:600px;
+    position:absolute;
+    top:5px;
+    left:900px;
+    opacity:0.8;
+    background-size: 300px 190px;
+
+    animation-name: move;
+    animation-duration: 40s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+}
+
+#cloud2 {
+    display:none;
+    background-image: url(../pictures/cloud.png);
+    background-repeat: no-repeat;
+    height:180px;
+    width:600px;
+    position:absolute;
+    top:85px;
+    left:580px;
+    opacity:0.8;
+    background-size: 300px 190px;
+
+    animation-name: move;
+    animation-duration: 20s; 
+    animation-delay: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+}
+#cloud3 {
+      display:none;
+      background-image: url(../pictures/backcloud.png);
+      background-repeat: no-repeat;
+      height:180px;
+      width:600px;
+      position:absolute;
+      top:55px;
+      left:580px;
+      opacity:0.8;
+      background-size: 300px 190px;
+  
+      animation-name: move;
+      animation-duration: 10s; 
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+      animation-timing-function:linear; 
+}
+
+#sun {
+       display:none;
+       background-image: url(../pictures/sun.png);
+       background-repeat: no-repeat;
+       height:180px;
+       width:600px;
+       position:absolute;
+       top:10px;
+       left:580px;
+       opacity:0.8;
+       background-size: 300px 190px;
+   
+       animation-name: move;
+       animation-duration: 90s; 
+       animation-fill-mode: both;
+       animation-iteration-count: infinite;
+       animation-timing-function:linear; 
+ 
+}
+#restart {
+    background-color: pink;
+    position:fixed;
+    height:100px;
+    width:100px;
+    display: none;
+}
+.jumping {
+    animation:jump 0.5s;
+}
+.moving {
+    animation:emoji 0.5s infinite linear;
+}
+
+
 @keyframes move{
-    from{ transform: translateX(2500px)}
-    to{ transform: translateX(-100px)}
+    from{ left: 1200px;}
+    to{ left: 0px;}
 }
 
 @keyframes  jump{
     0% {
-        bottom: 100px;
+        top: 200px;
       }
       50% {
-        bottom: 500px;
+        top: 0px;
       }
       75% {
-        bottom: 500px;
+        top: 00px;
       }
       100% {
-        bottom: 100px;
+        top: 200px;
       }
     }
     
-
 @keyframes emoji{
-    0% {transform:translateY(-2px);}
-    50% {transform:translateY(2px);}
+        0% {transform:translateY(-2px);}
+        50% {transform:translateY(2px);}
 }
-
+    
 @keyframes jumpStart{
-    0% {transform:translateY(-2px);}
-    50% {transform:translateY(200px);}
-    100% {transform: translateY(0px);}
+        0% {transform:translateY(-2px);}
+        50% {transform:translateY(200px);}
+        100% {transform: translateY(0px);}
 }

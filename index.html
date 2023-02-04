@@ -4,37 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <h1>Jumping Emoji</h1>
+
 </head>
 <body>
-    <!-- <img id="sky" src="pictures/sky.png"> -->
-    <div class="game"></div>
-    <div id ="timer">
-        00:00
-    </div>
-    <img id="char" class="moving" src="pictures/happy.png">
-    <img id="sun" src="pictures/sun.png">
-    <!-- <img id="grass" src="pictures/grass.png"> -->
-    <img id="cloud1" src="pictures/cloud.png">
-    <img id="cloud2" src="pictures/cloud.png">
-    <img id="cloud3" src="pictures/cloud.png">
-    <img id="cloud4" src="pictures/backcloud.png">
+    <!-- <div id="instructions">Welcome to Jumping Emoji!<br>This is an obstacle game. Please use either the space bar or arrow up button to jump over emoji obstacles. You can start the button by clicking any emoji.<br> Good luck!</div> -->
+        <div id="char"></div>
+        <div id="obstacle1"></div>
+        <div id="obstacle2"></div>
+        <div id="grass"></div>
+        <div id="sun"></div>
+        <div id="cloud1"></div>
+        <div id="cloud2"></div>
+        <div id="cloud3"></div>
+        <div id="cloud4"></div>
     <img id="happy" class="moving" src="pictures/happy.png">
     <img id="silly" class="moving" src="pictures/silly.png">
     <img id="cool" class="moving" src="pictures/cool.png">
-    <img id="obstacle1" src="pictures/fire.png">
-    <img id="obstacle2" src="pictures/fire.png">
-    <img id="obstacle3" src="pictures/plant.png">
-    <div id="grass"></div>
     <button id='startButton1'></button>
     <button id='startButton2'></button>
     <button id='startButton3'></button>
-    <p><span class='player'></span>Score: <span class="score"></span></p>
-    <h2>Game Over!</h2>
-    <img id="end" src="pictures/gameover.png">
-
-
-<script type="text/javascript" src="js/app.js"></script>
+    <button id='restart'></button>
+    <p><span class='player'></span>Score: <span id="score"></span></p>
+    <div id ="timer">
+        00:00
+    </div>
+    <script src="js/app.js"></script>
 </body>
 </html>
+
