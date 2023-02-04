@@ -7,6 +7,7 @@ alert("Welcome to Jumping Emoji! "+ "\n\nThis is an obstacle game. Please use ei
 const char = document.getElementById('char')
 const obstacle1 = document.getElementById('obstacle1')
 const obstacle2 = document.getElementById('obstacle2')
+const obstacle3 = document.getElementById('obstacle3')
 
 
 
@@ -45,6 +46,7 @@ function startGame() {
     sun.style.display='inline';
     obstacle1.style.display='inline';
     obstacle2.style.display='inline';
+    obstacle3.style.display='inline';
     cloud1.style.display='inline';
     cloud2.style.display='inline';
     cloud3.style.display='inline';
@@ -73,16 +75,18 @@ play3.addEventListener('click', startGame)
 
 //This function works, but does not see the image :(
 
-// const changeEmojiToCool = () => {
-//     char.src="pictures/cool.png"
-// }
-// const changeEmojiToSilly = () => {
-//     char.src='pictures/silly.png'
-//     char.style.backgroundRepeat='no-repeat'
-// }
+const changeEmojiToCool = () => {
+    char.style.backgroundImage="url(pictures/cool.png)";
+}
+const changeEmojiToSilly = () => {
+    char.style.backgroundImage="url(pictures/silly.png)";
+    // char.style.height='100px';
+    // char.style.width='100px';
+    char.style.backgroundRepeat='no-repeat';
+}
 
-//  play1.addEventListener('click', changeEmojiToSilly)
-//  play3.addEventListener('click', changeEmojiToCool)
+ play1.addEventListener('click', changeEmojiToSilly)
+ play3.addEventListener('click', changeEmojiToCool)
 
 
 //--------------------------------------------------------------
@@ -105,8 +109,10 @@ let hit= setInterval(function() {
     );
     let obstacle2Left = parseInt(window.getComputedStyle(obstacle2).getPropertyValue('left')
     );
+    let obstacle3Left = parseInt(window.getComputedStyle(obstacle3).getPropertyValue('left')
+    );
 
-    if((obstacle1Left<30 && obstacle1Left>10 && charTop>=350) || (obstacle2Left<30 && obstacle2Left>10 && charTop>=350)){
+    if((obstacle1Left<30 && obstacle1Left>10 && charTop>=350) || (obstacle2Left<30 && obstacle2Left>10 && charTop>=350) || (obstacle3Left<30 && obstacle3Left>10 && charTop>=350)){
        
         alert("Your score is: "+ score.innerText + "\n\nYour time is: "+ time.innerText);
         return gameOver();
@@ -167,6 +173,7 @@ function gameOver() {
     h1.innerText="Game Over"
     obstacle1.remove()
     obstacle2.remove()
+    obstacle3.remove()
     grass.remove()
     sun.remove()
     cloud1.remove()

@@ -149,6 +149,19 @@ p {
     animation-iteration-count: infinite;
     animation-timing-function:linear; 
 }
+#obstacle3 {
+    display:none;
+    background-image: url(../pictures/turtle.png);
+    width:50px;
+    height: 50px;
+    position:absolute;
+    bottom:85px;
+    background-size: 50px 50px;
+    animation-name: move;
+    animation-duration: 20s; 
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
 
 #cloud1 {
     display:none;
