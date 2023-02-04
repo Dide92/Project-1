@@ -1,7 +1,7 @@
 console.log('Project 1')
 
 
-alert("Your Welcome to Jumping Emoji! "+ "\n\nThis is an obstacle game. Please use either the space bar or arrow up button to jump over emoji obstacles. You can start the button by clicking any emoji."+"\n\nGood luck and have fun!")
+alert("Welcome to Jumping Emoji! "+ "\n\nThis is an obstacle game. Please use either the space bar or arrow up button to jump over emoji obstacles. You can start the button by clicking any emoji."+"\n\nGood luck and have fun!")
 
 
 const char = document.getElementById('char')
