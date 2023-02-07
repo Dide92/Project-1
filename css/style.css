@@ -255,6 +255,22 @@ p {
     cursor: pointer;
     animation: rotate 2s infinite alternate;
 }
+#winner {
+    background-image: url(../pictures/winner.png);
+    border: 8px solid black;
+    border-radius: 10%;
+    display: none;
+    width: 500px;
+    height:500px;
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top:14%;
+    left:35%;
+    cursor: pointer;
+    animation: rotate 2s infinite alternate;
+}
 .jumping {
     animation:jump 0.5s;
 }

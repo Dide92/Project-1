@@ -25,12 +25,11 @@ let play3 = document.getElementById('startButton3')
 let h1=document.querySelector('h1')
 let p=document.querySelector('p')
 let end = document.getElementById('end')
-let h2 = document.querySelector('h2')
 let score=document.querySelector('#score')
 let player= document.querySelector('.player')
 let time = document. getElementById('timer')
 let restart = document.getElementById('restart')
-
+let winner = document.getElementById('winner')
 //--------------------------------------------------------------
 
 function hello() {
@@ -131,7 +130,7 @@ document.addEventListener('keydown',keycodes)
 //--------------------------------------------------------------
 
 class Game {
-    constructor(timer, score, ) {
+    constructor(timer, score, win ) {
         this.timer=timer
         this.score=0
     }
@@ -152,10 +151,14 @@ class Game {
 document.querySelector('#score').innerHTML = this.score
         if (over===true) {
             clearInterval(result)
+        } else if (this.score === 1000) {
+            alert("Congratulations! You won!")
+            return win();
         }
         },100)
     
     }
+
 }
 
 const Emoji = new Game ('Jumping Emoji')
@@ -167,10 +170,6 @@ function gameOver() {
     over=true
     score.style.display='inline'
     player.style.display='none'
-    // time.style.display='none'
-    // time.innerText =this.time
-    // end.style.display='inline';
-    h1.innerText="Game Over"
     obstacle1.remove()
     obstacle2.remove()
     obstacle3.remove()
@@ -181,18 +180,29 @@ function gameOver() {
     cloud3.remove()
     char.style.display='none'
     restart.style.display='inline'
-    // player.style.position='absolute';
-    // score.style.position='absolute';
-    // document.querySelector('.player').innerText = playerName +"'s "
-    // document.querySelector('.score').innerText =this.score
-    // Emoji.scoreResult()
-    // Emoji.timing()
-    // location.reload()
-    // characters.style.position='relative';
-    // location.reload();
 }
 
 restart.addEventListener('click', () => {
     window.location.reload()
 })
 
+
+function win() {
+    over=true
+    score.style.display='inline'
+    player.style.display='none'
+    h1.style.innerText="WINNER"
+    obstacle1.remove()
+    obstacle2.remove()
+    obstacle3.remove()
+    grass.remove()
+    sun.remove()
+    cloud1.remove()
+    cloud2.remove()
+    cloud3.remove()
+    char.style.display='none'
+    winner.style.display='inline'
+}
+winner.addEventListener('click', () => {
+    window.location.reload()
+})
